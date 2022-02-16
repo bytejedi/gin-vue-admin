@@ -2,7 +2,6 @@ package system
 
 import (
 	"fmt"
-	"path/filepath"
 
 	"github.com/flipped-aurora/gin-vue-admin/server/config"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
@@ -69,7 +68,6 @@ func (initDBService *InitDBService) initMsqlDB(conf request.InitDB) error {
 		return err
 	}
 
-	global.GVA_CONFIG.AutoCode.Root, _ = filepath.Abs("..")
 	return nil
 }
 

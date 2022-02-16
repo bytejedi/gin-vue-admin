@@ -1,8 +1,6 @@
 package system
 
 import (
-	"path/filepath"
-
 	"github.com/flipped-aurora/gin-vue-admin/server/config"
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	model "github.com/flipped-aurora/gin-vue-admin/server/model/system"
@@ -63,7 +61,6 @@ func (initDBService *InitDBService) initPgsqlDB(conf request.InitDB) error {
 		return err
 	}
 
-	global.GVA_CONFIG.AutoCode.Root, _ = filepath.Abs("..")
 	return nil
 }
 

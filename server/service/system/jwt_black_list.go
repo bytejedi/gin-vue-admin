@@ -4,10 +4,9 @@ import (
 	"context"
 	"time"
 
-	"go.uber.org/zap"
-
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/system"
+	"go.uber.org/zap"
 )
 
 type JwtService struct{}

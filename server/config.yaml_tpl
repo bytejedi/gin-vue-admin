@@ -1,17 +1,3 @@
-aliyun-oss:
-  endpoint: ""
-  access-key-id: ""
-  access-key-secret: ""
-  bucket-name: ""
-  bucket-url: ""
-  base-path: ""
-aws-s3:
-  bucket: ""
-  region: ""
-  secret-id: ""
-  secret-key: ""
-  base-url: ""
-  path-prefix: ""
 captcha:
   key-long: 6
   img-width: 240
@@ -33,7 +19,6 @@ cors:
     expose-headers: Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers,
       Content-Type
     allow-credentials: true
-db-list: []
 email:
   to: xxx@qq.com
   port: 465
@@ -44,17 +29,11 @@ email:
   nickname: test
 excel:
   dir: ./resource/excel/
-hua-wei-obs:
-  path: ""
-  bucket: ""
-  endpoint: ""
-  access-key: ""
-  secret-key: ""
 jwt:
   buffer-time: 86400
   expires-time: 604800
   issuer: qmPlus
-  signing-key: 8681b3b6-a34d-45d2-840c-86a26fb905a8
+  signing-key: 14ff9484-440b-4eb2-8e4f-57d97493a3c9
 local:
   path: uploads/file
 mysql:
@@ -68,25 +47,6 @@ mysql:
   max-open-conns: 100
   log-mode: error
   log-zap: false
-pgsql:
-  path: ""
-  port: ""
-  config: ""
-  db-name: ""
-  username: ""
-  password: ""
-  max-idle-conns: 0
-  max-open-conns: 0
-  log-mode: ""
-  log-zap: false
-qiniu:
-  zone: ""
-  bucket: ""
-  img-path: ""
-  use-https: false
-  access-key: ""
-  secret-key: ""
-  use-cdn-domains: false
 redis:
   db: 0
   addr: 127.0.0.1:6379
@@ -99,13 +59,6 @@ system:
   use-multipoint: false
   iplimit-count: 15000
   iplimit-time: 3600
-tencent-cos:
-  bucket: ""
-  region: ""
-  secret-id: ""
-  secret-key: ""
-  base-url: ""
-  path-prefix: ""
 timer:
   start: true
   spec: '@daily'
@@ -121,7 +74,60 @@ zap:
   format: console
   prefix: '[github.com/flipped-aurora/gin-vue-admin/server]'
   director: log
-  showLine: false
+  showLine: true
   encode-level: LowercaseColorLevelEncoder
   stacktrace-key: stacktrace
   log-in-console: true
+
+##### 对象存储 #####
+#aliyun-oss:
+#  endpoint: yourEndpoint
+#  access-key-id: yourAccessKeyId
+#  access-key-secret: yourAccessKeySecret
+#  bucket-name: yourBucketName
+#  bucket-url: yourBucketUrl
+#  base-path: yourBasePath
+#aws-s3:
+#  bucket: xxxxx-10005608
+#  region: ap-shanghai
+#  secret-id: xxxxxxxx
+#  secret-key: xxxxxxxx
+#  base-url: https://gin.vue.admin
+#  path-prefix: github.com/flipped-aurora/gin-vue-admin/server
+#tencent-cos:
+#  bucket: xxxxx-10005608
+#  region: ap-shanghai
+#  secret-id: xxxxxxxx
+#  secret-key: xxxxxxxx
+#  base-url: https://gin.vue.admin
+#  path-prefix: github.com/flipped-aurora/gin-vue-admin/server
+#qiniu:
+#  zone: ZoneHuaDong
+#  bucket: ""
+#  img-path: ""
+#  use-https: false
+#  access-key: ""
+#  secret-key: ""
+#  use-cdn-domains: false
+#hua-wei-obs:
+#  path: you-path
+#  bucket: you-bucket
+#  endpoint: you-endpoint
+#  access-key: you-access-key
+#  secret-key: you-secret-key
+
+##### 多数据库支持 #####
+#db-list:
+#- disable: false
+#  type: ""
+#  alias-name: ""
+#  path: ""
+#  port: ""
+#  config: ""
+#  db-name: ""
+#  username: ""
+#  password: ""
+#  max-idle-conns: 10
+#  max-open-conns: 100
+#  log-mode: ""
+#  log-zap: false
